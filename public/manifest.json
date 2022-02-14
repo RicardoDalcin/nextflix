@@ -1,0 +1,9 @@
+{
+    "theme_color": "#fff",
+    "background_color": "#141414",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Nextflix",
+    "short_name": "Nextflix"
+}
