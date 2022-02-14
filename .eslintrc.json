@@ -47,6 +47,7 @@
     "dot-notation": "warn",
 
     "camelcase": "off",
+    "class-methods-use-this": "off",
     "space-before-function-paren": "off",
 
     "import/prefer-default-export": "off",
