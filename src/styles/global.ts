@@ -3,10 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 import { colors } from './colors';
 
 export const global = createGlobalStyle`
-  :root {
-    font-size: 60% !important;
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -18,13 +14,19 @@ export const global = createGlobalStyle`
     width: 100%;
   }
 
-  body {
-    background: ${colors.background};
-    overflow-y: auto;
-  }
+  html, body {
+    font-size: 10px;
 
-  html {
-    min-height: -webkit-fill-available;
+    background: ${colors.background};
+    color: ${colors.text};
+
+    @media screen and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) {
+        font-size: 1.2vw;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4 / 3) {
+        font-size: 1vw;
+    }
   }
 
   body,
@@ -38,10 +40,4 @@ export const global = createGlobalStyle`
   button:hover {
     cursor: pointer;
   }
-
-  @media (min-width: 700px) {
-  :root {
-    font-size: 62.5%;
-  }
-}
 `;
